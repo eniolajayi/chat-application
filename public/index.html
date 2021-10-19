@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatty</title>
+    <link rel="stylesheet" href="css/base.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Chatty</h1>
+      </header>
+      <main class="main">
+        <form class="form" action="chatboard.html">
+          <div class="input-group">
+            <label class="input-label" for="username">Username</label>
+            <input
+              class="input"
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Enter your username..."
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label class="input-label" for="room">Room</label>
+            <select class="input--select" name="room" id="room">
+              <option value="JavaScript">JavaScript</option>
+              <option value="Python">Python</option>
+              <option value="PHP">PHP</option>
+              <option value="C#">C#</option>
+              <option value="Ruby">Ruby</option>
+              <option value="Java">Java</option>
+            </select>
+          </div>
+          <button class="btn btn-primary" type="submit">Join Chat</button>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
