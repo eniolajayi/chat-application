@@ -38,10 +38,15 @@ select {
 }
 
 :root {
-  --font-family: "";
+  --font-family: "Gotu", sans-serif;
+  --grey: #eeeeee;
   --light: #fff;
-  --black: #000;
-  --dark: #030317;
+  --black: #222831;
+  --dark: #1c1427;
+  --primary-yellow: #ffd369;
+  --success-green-1: #ccffbd;
+  --success-green-2: #7eca9c;
+  --grey-2: #40394a;
 
   scroll-behavior: smooth;
 }
