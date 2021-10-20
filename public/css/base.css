@@ -43,10 +43,13 @@ select {
   --light: #fff;
   --black: #222831;
   --dark: #1c1427;
+  --primary: #667aff;
   --primary-yellow: #ffd369;
   --success-green-1: #ccffbd;
   --success-green-2: #7eca9c;
+  --error-color: #d9534f;
   --grey-2: #40394a;
+  --gradient: linear-gradient(to right, #64b3f4, #c2e59c);
 
   scroll-behavior: smooth;
 }
@@ -91,6 +94,99 @@ html:focus-within {
 
 body {
   font-family: var(--font-family);
+  color: var(--dark);
   line-height: 1.6;
   vertical-align: baseline;
+}
+
+button {
+  font-family: var(--font-family);
+}
+
+input,
+label {
+  display: block;
+}
+
+.heading-1 {
+  line-height: 1.2;
+  width: min(25ch, 100%);
+  font-size: clamp(2.25rem, 6vw, 4.1875rem);
+}
+
+.btn {
+  width: 100%;
+  padding: 0.6rem 1.25rem;
+  border: 0;
+  font-size: 0.85em;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--dark);
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--dark);
+}
+
+.header {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+.logo {
+  letter-spacing: -0.2ch;
+  color: var(--light);
+}
+
+.main {
+  width: min(60ch, 100% - 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+  border: 1px solid var(--primary);
+  margin-top: 3rem;
+  background-color: var(--dark);
+  border-radius: 0.4rem;
+}
+
+.form {
+  border-radius: 0.4rem;
+  width: 100%;
+  height: 100%;
+  padding: 2rem 1rem;
+}
+
+.input-group {
+  margin-bottom: 1.875rem;
+}
+.input-label {
+  text-transform: lowercase;
+  font-weight: 400;
+  color: var(--grey);
+  margin-bottom: 0.125rem;
+  letter-spacing: -0.2ch;
+}
+.input {
+  width: 100%;
+  min-height: 50px;
+  font-family: var(--font-family);
+  padding: 0.2rem 0 0.2rem 0.65rem;
+  margin-bottom: 1rem;
+  border-radius: 0.4rem;
+  outline: none;
+  border: 1px solid var(--grey);
 }
