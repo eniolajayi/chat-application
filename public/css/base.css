@@ -114,6 +114,10 @@ label {
   font-size: clamp(2.25rem, 6vw, 4.1875rem);
 }
 
+.heading-2 {
+  font-size: clamp(2rem, 4vw, 3.125rem);
+}
+
 .btn {
   width: 100%;
   padding: 0.6rem 1.25rem;
@@ -129,6 +133,7 @@ label {
   background-color: var(--primary);
   color: var(--dark);
 }
+
 .container {
   margin-left: auto;
   margin-right: auto;
