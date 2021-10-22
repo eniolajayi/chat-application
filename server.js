@@ -20,7 +20,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 const PORT = 3000 || process.env.PORT;
-const botName = "MEE6";
+const botName = "Bot";
 
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -32,7 +32,8 @@ io.on("connection", (socket) => {
     const user = addUser(socket.id, username, room);
     socket.join(user.room);
     // Welcome user
-    socket.emit("message", () =>
+    socket.emit(
+      "message",
       createMessageData(botName, "Welcome, Let's get chatty")
     );
     // let room know whena user connects
@@ -43,7 +44,7 @@ io.on("connection", (socket) => {
         createMessageData(botName, `${user.username} as joined the chat`)
       );
     // send users and room info
-    io.to(user.room).emit("roomUsers", {
+    io.to(user.room).emit("room_users", {
       room: user.room,
       users: getRoomUsers(user.room),
     });
@@ -52,6 +53,7 @@ io.on("connection", (socket) => {
   // listen for chat message
   socket.on("chat_message", (msg) => {
     const user = getCurrentUser(socket.id);
+    console.log(user);
     if (user) {
       io.to(user.room).emit("message", createMessageData(user.username, msg));
     }
