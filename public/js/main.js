@@ -70,7 +70,9 @@ ready(function () {
   // Add users to dom
   function outputUsers(users) {
     userList.innerHTML = `
-    ${users.map((user) => `<li>${user.username}</li>`).join("")}
+    ${users
+      .map((user) => `<li class="users__username">${user.username}</li>`)
+      .join("")}
     `;
   }
 });
