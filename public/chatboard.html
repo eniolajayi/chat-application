@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chatty | board</title>
+    <title>Chatty</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,7 +19,7 @@
     <div class="container">
       <div class="chat-wrapper">
         <header class="chat-header">
-          <h1 class="text-tight">Chatty</h1>
+          <h1 class="logo text-tight">Chatty</h1>
           <a href="index.html" class="btn text-tight">leave room</a>
         </header>
         <main class="chat-main">
@@ -27,30 +27,24 @@
             <h2 class="text-tight">Room Name:</h2>
             <h3 id="room-name"></h3>
             <h2 class="text-tight">Users</h2>
-            <ul class="users"></ul>
+            <ul id="users" class="users"></ul>
           </aside>
           <section class="chat-messages">
             <!-- MESSAGE TEMPLATE -->
-            <div class="message">
-              <p class="meta">
-                eniolajayi
-                <span class="time">7:16 PM</span>
-              </p>
-              <p class="text">Holla, xie xie enny lol!</p>
-            </div>
             <!--  -->
           </section>
         </main>
         <div class="chat-form-wrapper">
-          <form id="chat-form">
+          <form class="chat-form" id="chat-form">
             <input
               type="text"
-              id="message-input"
+              class="message-input"
+              id="msg"
               placeholder="Enter Message"
               required
               autocomplete="off"
             />
-            <button class="btn">Send</button>
+            <button class="btn send-btn">Send</button>
           </form>
         </div>
       </div>
