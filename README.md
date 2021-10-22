@@ -1,3 +1,3 @@
 # Chatty
 
-a chat application using socket.io.
+a chat application built using js and socket.io.
